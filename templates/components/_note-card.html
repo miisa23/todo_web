@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">{{ note.title }}</h3>
+    <h6 class="card-subtitle mb-2 text-primary">{{ note.category }}</h6>
+    <h6 class="card-text mb-2 ">{{ note.text }}</h6>
+    <p class="card-text"> Создано: {{ note.created_at }}</p>
+    <p class="card-text"> Срок выполнения: {{ note.deadline }}</p>
+    <p class="card-text"> Статус: {{ note.status }}</p>
+    <a href="{% url 'note_detail' note.pk %}" class="card-link">Просмотр</a>
+  </div>
+</div>

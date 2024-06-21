@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Удалить статью: {{ note.title }}
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Действительно ли вы хотите удалить задачу с названием: <b>{{ note.title }}</b>?</p>
+    <input type="submit" value="Да, удалить" class="btn btn-danger">
+    <a href="{{ note.get_absolute_url }}" class="btn btn-info">Нет</a>
+</form>
+{% endblock %}
