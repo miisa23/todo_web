@@ -6,15 +6,15 @@ from django.views.generic import UpdateView, DeleteView, ListView
 from django.db.models import Q
 
 
-def home_view(request):
-    notes = Note.objects.all()
-
-    # categories = Category.objects.all()
-    context = {
-        'notes': notes,
-        # 'categories': categories
-    }
-    return render(request, 'core/index.html', context)
+# def home_view(request):
+#     notes = Note.objects.all()
+#
+#     # categories = Category.objects.all()
+#     context = {
+#         'notes': notes,
+#         # 'categories': categories
+#     }
+#     return render(request, 'core/index.html', context)
 
 
 class HomeView(ListView):

@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-e1m9ayaeuq_$&o6-=cu+2qx_u@zwj*r#!%(@5a@x9@s3+(l=3&
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'munisaa23.pythonanywhere.com'
+    'munisaa23.pythonanywhere.com',
+    '127.0.0.1'
 ]
 
 
@@ -39,8 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'drf_spectacular',
 
-    'core.apps.CoreConfig'
+    'core.apps.CoreConfig',
+    'api.apps.ApiConfig'
 
 ]
 
@@ -136,3 +140,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
+}
